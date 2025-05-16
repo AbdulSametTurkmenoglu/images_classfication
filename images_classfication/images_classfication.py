@@ -132,6 +132,42 @@ def evaluate_model():
     plt.savefig('confusion_matrix.png')
     plt.close()
 
+#%%
+
+
+def save_sample_predictions(num_samples=16):
+    model.eval()
+    images_shown = 0
+    fig = plt.figure(figsize=(12, 12))
+
+    with torch.no_grad():
+        for images, labels in test_loader:
+            images, labels = images.to(device), labels.to(device)
+            outputs = model(images)
+            _, preds = torch.max(outputs, 1)
+            
+            for i in range(images.size(0)):
+                if images_shown >= num_samples:
+                    break
+                ax = fig.add_subplot(4, 4, images_shown + 1, xticks=[], yticks=[])
+                img = images[i].cpu() * 0.5 + 0.5  # normalize geri çevir
+                np_img = img.numpy().transpose((1, 2, 0))
+                ax.imshow(np_img)
+                ax.set_title(f"True: {classes[labels[i]]}\nPred: {classes[preds[i]]}", 
+                             color=("green" if preds[i] == labels[i] else "red"))
+                images_shown += 1
+            
+            if images_shown >= num_samples:
+                break
+
+    plt.tight_layout()
+    plt.savefig('predictions.png')
+    plt.close()
+
+
+
+
+
 
 # %%
 
@@ -140,7 +176,9 @@ if __name__ == '__main__':
     train_model()
     print("\nEvaluating model...")
     evaluate_model()
-    
+    print("saving sample predictions...")   
+    save_sample_predictions()
+
     
     
     
