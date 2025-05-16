@@ -108,7 +108,7 @@ The CIFAR-10 model, while simple, serves as a prototype for such systems. With f
 - Seaborn
 - Scikit-learn
 
-### Install dependencies:
+## Install dependencies:
 
 ```bash
 pip install torch torchvision numpy matplotlib seaborn scikit-learn
