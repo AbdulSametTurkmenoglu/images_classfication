@@ -112,22 +112,22 @@ The CIFAR-10 model, while simple, serves as a prototype for such systems. With f
 
 ```bash
 pip install torch torchvision numpy matplotlib seaborn scikit-learn
-
+```
 
 ##  Usage
 
 ###  Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/CIFAR10-Image-Classification.git
+git clone https://github.com/AbdulSametTurkmenoglu/CIFAR10-Image-Classification.git
 cd CIFAR10-Image-Classification
-
+```
 
 ### Run the script:
 
 ```bash
 python cifar10_image_classification.py
-
+```
 
 
 ##  Outputs
