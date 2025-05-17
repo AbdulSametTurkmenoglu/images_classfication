@@ -137,15 +137,20 @@ python cifar10_image_classification.py
 - Accuracy  
 - Precision  
 - Recall  
-- F1-score  
+- F1-score
 
-**Files:**
 
+### Files
 - `confusion_matrix.png` – Confusion matrix visualization  
-- `training_metrics.png` – Loss and accuracy plots per epoch  
-- `predictions.png` – Sample test predictions  
+  ![Confusion Matrix](images_classification/confusion_matrix.png)
 
----
+- `training_metrics.png` – Loss and accuracy plots per epoch  
+  ![Training Metrics](images_classification/training_metrics.png)
+
+- `predictions.png` – Sample predictions from the test set  
+  ![Sample Predictions](images_classification/predictions.png)
+
+
 
 ##  License
 
