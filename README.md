@@ -142,13 +142,13 @@ python cifar10_image_classification.py
 
 ### Files
 - `confusion_matrix.png` – Confusion matrix visualization  
-  ![Confusion Matrix](images_classification/confusion_matrix.png)
+  ![Confusion Matrix](images_classfication/images_classfication/confusion_matrix.png)
 
 - `training_metrics.png` – Loss and accuracy plots per epoch  
-  ![Training Metrics](images_classification/training_metrics.png)
+  ![Training Metrics](images_classfication/images_classification/training_metrics.png)
 
 - `predictions.png` – Sample predictions from the test set  
-  ![Sample Predictions](images_classification/predictions.png)
+  ![Sample Predictions](images_classfication/images_classification/predictions.png)
 
 
 
